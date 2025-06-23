@@ -1,0 +1,104 @@
+/* Definisi Variabel Warna */
+:root {
+    --bg-color: #f4f7fc;
+    --text-color: #212529;
+    --card-bg: #ffffff;
+    --card-border: rgba(0, 0, 0, 0.08);
+    --shadow-color: rgba(0, 0, 0, 0.04);
+    --primary-color: #1e90ff; /* DodgerBlue */
+    --primary-hover: #1c86ee;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --card-border: rgba(255, 255, 255, 0.15);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --primary-color: #1e90ff;
+    --primary-hover: #48a3ff;
+}
+
+/* Transisi Halus */
+body, .card, .navbar, .btn, .form-select {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Gaya Dasar */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Kustomisasi Bootstrap */
+.form-select {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--card-border);
+}
+
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(30, 144, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Navigasi */
+.navbar {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--card-border);
+}
+.navbar-brand i {
+    color: var(--primary-color);
+}
+
+/* Kartu */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+}
+
+/* Kartu Cuaca */
+.weather-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.weather-icon {
+    font-size: 5rem;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+    text-shadow: 0 0 20px rgba(30, 144, 255, 0.3);
+}
+.list-group-item {
+    background-color: transparent;
+    border-color: var(--card-border);
+}

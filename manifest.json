@@ -1,0 +1,23 @@
+{
+    "name": "Aplikasi Prakiraan Cuaca BMKG",
+    "short_name": "Cuaca BMKG",
+    "description": "Aplikasi untuk melihat prakiraan cuaca di Indonesia dari data resmi BMKG.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#f4f7fc",
+    "theme_color": "#1e90ff",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "https://placehold.co/192x192/1e90ff/FFFFFF?text=Cuaca",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "https://placehold.co/512x512/1e90ff/FFFFFF?text=Cuaca",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}

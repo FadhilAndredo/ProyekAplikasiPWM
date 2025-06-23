@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e90ff"/>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/icon-192x192.png">
+    <title>Aplikasi Cuaca BMKG</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar sticky-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-cloud-sun-fill"></i> Prakiraan Cuaca BMKG
+            </a>
+            <button id="theme-toggle" class="btn btn-outline-primary" aria-label="Ganti Tema">
+                <i class="bi bi-moon-stars-fill"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+        <div class="card control-card shadow-sm mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Pilih Lokasi</h5>
+                <div class="row g-2">
+                    <div class="col-md-6">
+                        <label for="province-selector" class="form-label small">Provinsi</label>
+                        <select id="province-selector" class="form-select" aria-label="Pilih Provinsi">
+                            <option selected>Memuat provinsi...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="district-selector" class="form-label small">Kabupaten/Kecamatan</label>
+                        <select id="district-selector" class="form-select" aria-label="Pilih Wilayah" disabled>
+                            <option selected>Pilih provinsi dulu</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loader" class="text-center my-5 d-none">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-2">Mengambil data dari BMKG...</p>
+        </div>
+        
+        <div id="weather-container" class="row justify-content-center g-3">
+             </div>
+    </main>
+
+    <footer class="text-center text-muted py-4 small">
+        <p class="mb-1">&copy; 2024 Dibuat untuk Anda</p>
+        <p>Dengan data dari <a href="https://data.bmkg.go.id" target="_blank">BMKG</a> & <a href="https://github.com/infoBMKG/data-cuaca" target="_blank">infoBMKG</a>.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
