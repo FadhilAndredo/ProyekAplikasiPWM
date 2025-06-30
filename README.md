@@ -1,4 +1,2 @@
-# ProyekAplikasiPWM (Cuaca-BMKG)
+# ProyekAplikasiPWM (Cuaca-OpenWheather)
 225410101 - FadhilAndredo
-
-Masih Proses Maaf Ya bu Ningrum
